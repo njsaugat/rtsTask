@@ -4,28 +4,6 @@ import dummy_data from './assets/dummy_data.json';
 import React from 'react';
 
 function convertDummyDataToDummyData2() {
-  const timeValues = dummy_data[0].data.map((entityData) => entityData.time);
-  const entityNames = dummy_data.map((entity) => entity.name);
-  console.log(timeValues);
-  const dummy_data_2 = {
-    [timeValues[0]]: {
-      // dummy_data[0].name:
-      [entityNames[0]]: dummy_data[0].data[0].value,
-      [entityNames[1]]: dummy_data[1].data[0].value,
-      [entityNames[2]]: dummy_data[2].data[0].value,
-      [entityNames[3]]: dummy_data[3].data[0].value,
-    },
-  };
-
-  const dummy_data_1 = timeValues.map((timeValue, timeKeyIndex) => {
-    return {
-      [timeValue]: entityNames.map((nameValue, valueIndex) => {
-        return {
-          [nameValue]: dummy_data[valueIndex].data[timeKeyIndex].value,
-        };
-      }),
-    };
-  });
   let dummy_data_3 = {};
   dummy_data.map((entity) => {
     entity.data.map((entityData) => {
