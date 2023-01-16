@@ -2,6 +2,7 @@ import './App.css';
 import dummy_data from './assets/dummy_data.json';
 
 import React from 'react';
+import Page from './Page';
 
 function convertDummyDataToDummyData2() {
   let dummy_data_2 = {};
@@ -78,6 +79,7 @@ const App = () => {
       <RenderDummyData title={'Parameter'} />
       <br />
       <RenderDummyData2 title={'Time'} dummy_data_2={dummy_data_2} />
+      <Page />
     </>
   );
 };
